@@ -1,9 +1,22 @@
+import json
 import logging
 import unittest
-
+from parameterized import parameterized
 import api
 from api.api_employee import ApiEmployee
+from get_location import BASE_CA
 from tools.assert_common import assert_common
+
+def get_data():
+    list1 = []
+    list2 = []
+    with open(BASE_CA+"/data/data_test02.json")as f:
+        for data in json.load(f):
+            for num  in data.values():
+                list1.append(num)
+            list2.append(list1)
+
+        return list2
 
 
 class Employee(unittest.TestCase):
@@ -11,8 +24,8 @@ class Employee(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.api = ApiEmployee()
-
-    def test_01_post(self,username="TTSS000",mobile="13812113333",workNumber="123654887"):
+    @parameterized.expand(get_data())
+    def test_01_post(self,username,mobile,workNumber):
         r = self.api.post_user(username,mobile,workNumber)
         print("添加员工返回的响应信息:{}".format(r.json()))
         logging.info("添加员工返回的响应信息:{}".format(r.json()))

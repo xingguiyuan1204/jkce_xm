@@ -1,9 +1,26 @@
+import json
 import logging
 import unittest
 from parameterized import parameterized
 import api
 from api.api_login import ApiLogin
+from get_location import BASE_CA
 from tools.assert_common import assert_common
+
+def get_data():
+    list1 = []
+    list2 = []
+    with open(BASE_CA+"/data/data_test01.json")as f:
+        for data in json.load(f):
+            for num  in data.values():
+                list1.append(num)
+            list2.append(list1)
+
+        return list2
+
+
+
+
 
 
 class TestLogin(unittest.TestCase):
@@ -15,7 +32,7 @@ class TestLogin(unittest.TestCase):
 
         #数据驱动 参数化
 
-    @parameterized.expand([["13800000002","123456"]])
+    @parameterized.expand(get_data())
     # 登录测试方法
     def test01_login(self,mobile,password):
         # 调用业务方法
