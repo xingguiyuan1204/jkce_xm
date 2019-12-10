@@ -10,7 +10,7 @@ class TestLogin(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # 获取Apilogin对象
+        # 获取Apilogin   对象
         cls.login = ApiLogin()
     # 登录测试方法
     def test01_login(self,mobile="13800000002",password="123456"):
