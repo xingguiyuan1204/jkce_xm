@@ -20,10 +20,15 @@ class TestLogin(unittest.TestCase):
         token = r.json().get("data")
         api.headers['Authorization'] = "Bearer " + token
 
-        print(r.json())
-        logging.warning("啦啦啦啦啦")
+        #数据收集
+        print("登录成功组合后的token:{}".format(api.headers))
+        logging.info("登录成功组合后的token:{}".format(api.headers))
 
-        print("登录成功后headers值位",api.headers)
+        print("登录返回的数据:",r.json())
+        logging.info("登录返回的数据:{}".format(r.json()))
+
+        print("登录成功后headers值为:{}".format(api.headers))
+        logging.info("登录成功后headers值为:{}".format(api.headers))
         # 断言
         assert_common(self,r)
 

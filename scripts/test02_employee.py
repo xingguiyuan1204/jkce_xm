@@ -1,3 +1,4 @@
+import logging
 import unittest
 
 import api
@@ -11,31 +12,40 @@ class Employee(unittest.TestCase):
     def setUpClass(cls):
         cls.api = ApiEmployee()
 
-    def test_01_post(self,username="TTSS",mobile="13811113333",workNumber="123654987"):
+    def test_01_post(self,username="TTSS11",mobile="13812113333",workNumber="123654887"):
         r = self.api.post_user(username,mobile,workNumber)
-        print("执行后返回的响应信息",r.json())
+        print("添加员工返回的响应信息:{}".format(r.json()))
+        logging.info("添加员工返回的响应信息:{}".format(r.json()))
+
         api.user_id = r.json().get("data").get("id")
-        print("新增员工的id为",api.user_id)
+        print("新增员工的id为:{}".format(api.user_id))
+        logging.info("新增员工的id为:{}".format(api.user_id))
+
+        #断言
         assert_common(self,r)
 
     def test_02_get(self):
         r = self.api.get_user()
-        print("查询添加的员工信息",r.json())
+        print("查询添加的员工的信息:{}".format(r.json()))
+        logging.info("查询添加的员工的信息:{}".format(r.json()))
+
+        # 断言
         assert_common(self, r)
 
 
     def test_03_put(self,username="TTSS01"):
         r = self.api.put_user(username)
-        print("修改员工的信息",r.json())
+        print("修改员工的信息:{}".format(r.json))
+        logging.info("修改员工的信息:{}".format(r.json))
+
+        # 断言
         assert_common(self,r)
-
-
-
-
-
 
     def test_04_delete(self):
         r = self.api.delete_user()
-        print("删除员工返回的响应信息",r.json())
+        print("删除员工返回的响应信息:{}".format(r.json()))
+        logging.info("删除员工返回的响应信息:{}".format(r.json()))
+
+        # 断言
         assert_common(self, r)
 

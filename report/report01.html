@@ -123,8 +123,8 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">单元测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-12-10 10:30:15</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.124801</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-12-10 15:42:23</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.124800</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 5，通过 5，通过率= 100.00%</p>
 
 <p class='description'></p>
@@ -177,8 +177,9 @@ function html_escape(s) {
     <div id='div_pt1_1' class="collapse in">
     <pre>
     
-pt1_1: {'success': True, 'code': 10000, 'message': '操作成功！', 'data': '594e6323-9d3f-4351-9403-0bc8ddc8613e'}
-登录成功后headers值位 {'Content-Type': 'application/json', 'Authorization': 'Bearer 594e6323-9d3f-4351-9403-0bc8ddc8613e'}
+pt1_1: 登录成功组合后的token:{'Content-Type': 'application/json', 'Authorization': 'Bearer 5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
+登录返回的数据: {'success': True, 'code': 10000, 'message': '操作成功！', 'data': '5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
+登录成功后headers值为:{'Content-Type': 'application/json', 'Authorization': 'Bearer 5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
 
 
     </pre>
@@ -207,8 +208,8 @@ pt1_1: {'success': True, 'code': 10000, 'message': '操作成功！', 'data': '5
     <div id='div_pt2_1' class="collapse in">
     <pre>
     
-pt2_1: 执行后返回的响应信息 {'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204226919536873472'}}
-新增员工的id为 1204226919536873472
+pt2_1: 添加员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204305471137468416'}}
+新增员工的id为:1204305471137468416
 
 
     </pre>
@@ -228,7 +229,7 @@ pt2_1: 执行后返回的响应信息 {'success': True, 'code': 10000, 'message'
     <div id='div_pt2_2' class="collapse in">
     <pre>
     
-pt2_2: 查询添加的员工信息 {'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204226919536873472', 'mobile': '13811113333', 'username': 'TTSS', 'password': '2b7ddf94dd50cf829a8a104eb8819ec9', 'enableState': 1, 'createTime': None, 'companyId': '1', 'companyName': '传智播客', 'departmentId': None, 'timeOfEntry': None, 'formOfEmployment': None, 'workNumber': '123654987', 'formOfManagement': None, 'workingCity': None, 'correctionTime': None, 'inServiceStatus': None, 'departmentName': None, 'roleIds': [], 'staffPhoto': None}}
+pt2_2: 查询添加的员工的信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204305471137468416', 'mobile': '13812113333', 'username': 'TTSS11', 'password': '985a6e255b9b3ee7e0b81537045da53f', 'enableState': 1, 'createTime': None, 'companyId': '1', 'companyName': '传智播客', 'departmentId': None, 'timeOfEntry': None, 'formOfEmployment': None, 'workNumber': '123654887', 'formOfManagement': None, 'workingCity': None, 'correctionTime': None, 'inServiceStatus': None, 'departmentName': None, 'roleIds': [], 'staffPhoto': None}}
 
 
     </pre>
@@ -248,7 +249,7 @@ pt2_2: 查询添加的员工信息 {'success': True, 'code': 10000, 'message': '
     <div id='div_pt2_3' class="collapse in">
     <pre>
     
-pt2_3: 修改员工的信息 {'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204226919536873472'}}
+pt2_3: 修改员工的信息:&lt;bound method Response.json of &lt;Response [200]&gt;&gt;
 
 
     </pre>
@@ -268,7 +269,7 @@ pt2_3: 修改员工的信息 {'success': True, 'code': 10000, 'message': '操作
     <div id='div_pt2_4' class="collapse in">
     <pre>
     
-pt2_4: 删除员工返回的响应信息 {'success': True, 'code': 10000, 'message': '操作成功！', 'data': None}
+pt2_4: 删除员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': None}
 
 
     </pre>

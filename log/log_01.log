@@ -1,5 +1,16 @@
-2019-12-08 21:31:24,542  WARNING  [root]  [test01_login.py(test01_login:24)]  -  啦啦啦啦啦
-2019-12-10 10:04:49,591  WARNING  [root]  [test01_login.py(test01_login:24)]  -  啦啦啦啦啦
-2019-12-10 10:28:50,462  WARNING  [root]  [test01_login.py(test01_login:24)]  -  啦啦啦啦啦
-2019-12-10 10:29:43,846  WARNING  [root]  [test01_login.py(test01_login:24)]  -  啦啦啦啦啦
-2019-12-10 10:30:15,421  WARNING  [root]  [test01_login.py(test01_login:24)]  -  啦啦啦啦啦
+2019-12-10 15:37:20,597  INFO  [root]  [test01_login.py(test01_login:25)]  -  登录成功组合后的token:{'Content-Type': 'application/json', 'Authorization': 'Bearer c5960683-5bdc-47f6-9e04-6cdc5a8d12fe'}
+2019-12-10 15:37:20,597  INFO  [root]  [test01_login.py(test01_login:28)]  -  登录返回的数据:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': 'c5960683-5bdc-47f6-9e04-6cdc5a8d12fe'}
+2019-12-10 15:37:20,597  INFO  [root]  [test01_login.py(test01_login:31)]  -  登录成功后headers值为:{'Content-Type': 'application/json', 'Authorization': 'Bearer c5960683-5bdc-47f6-9e04-6cdc5a8d12fe'}
+2019-12-10 15:37:20,628  INFO  [root]  [test02_employee.py(test_01_post:18)]  -  添加员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204304201039302656'}}
+2019-12-10 15:37:20,628  INFO  [root]  [test02_employee.py(test_01_post:22)]  -  新增员工的id为:1204304201039302656
+2019-12-10 15:37:20,675  INFO  [root]  [test02_employee.py(test_02_get:30)]  -  查询添加的员工的信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204304201039302656', 'mobile': '13812113333', 'username': 'TTSS11', 'password': '985a6e255b9b3ee7e0b81537045da53f', 'enableState': 1, 'createTime': None, 'companyId': '1', 'companyName': '传智播客', 'departmentId': None, 'timeOfEntry': None, 'formOfEmployment': None, 'workNumber': '123654887', 'formOfManagement': None, 'workingCity': None, 'correctionTime': None, 'inServiceStatus': None, 'departmentName': None, 'roleIds': [], 'staffPhoto': None}}
+2019-12-10 15:37:20,706  INFO  [root]  [test02_employee.py(test_03_put:39)]  -  修改员工的信息:<bound method Response.json of <Response [200]>>
+2019-12-10 15:37:20,721  INFO  [root]  [test02_employee.py(test_04_delete:47)]  -  删除员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': None}
+2019-12-10 15:42:23,418  INFO  [root]  [test01_login.py(test01_login:25)]  -  登录成功组合后的token:{'Content-Type': 'application/json', 'Authorization': 'Bearer 5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
+2019-12-10 15:42:23,418  INFO  [root]  [test01_login.py(test01_login:28)]  -  登录返回的数据:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': '5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
+2019-12-10 15:42:23,418  INFO  [root]  [test01_login.py(test01_login:31)]  -  登录成功后headers值为:{'Content-Type': 'application/json', 'Authorization': 'Bearer 5bd7d798-4df3-4f5b-84cc-2bc34f6ec70a'}
+2019-12-10 15:42:23,449  INFO  [root]  [test02_employee.py(test_01_post:18)]  -  添加员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204305471137468416'}}
+2019-12-10 15:42:23,449  INFO  [root]  [test02_employee.py(test_01_post:22)]  -  新增员工的id为:1204305471137468416
+2019-12-10 15:42:23,465  INFO  [root]  [test02_employee.py(test_02_get:30)]  -  查询添加的员工的信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': {'id': '1204305471137468416', 'mobile': '13812113333', 'username': 'TTSS11', 'password': '985a6e255b9b3ee7e0b81537045da53f', 'enableState': 1, 'createTime': None, 'companyId': '1', 'companyName': '传智播客', 'departmentId': None, 'timeOfEntry': None, 'formOfEmployment': None, 'workNumber': '123654887', 'formOfManagement': None, 'workingCity': None, 'correctionTime': None, 'inServiceStatus': None, 'departmentName': None, 'roleIds': [], 'staffPhoto': None}}
+2019-12-10 15:42:23,496  INFO  [root]  [test02_employee.py(test_03_put:39)]  -  修改员工的信息:<bound method Response.json of <Response [200]>>
+2019-12-10 15:42:23,512  INFO  [root]  [test02_employee.py(test_04_delete:47)]  -  删除员工返回的响应信息:{'success': True, 'code': 10000, 'message': '操作成功！', 'data': None}
