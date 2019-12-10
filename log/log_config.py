@@ -12,15 +12,17 @@ def init_log_config():
     logger.setLevel(logging.INFO)
 
    # 创建处理器(输出到控制台)
-    shl =  logging.StreamHandler()
+   #  shl =  logging.StreamHandler()
+
    #创建处理器(输出到文件)
-    trfhl =logging.FileHandler(filename=BASE_CA+"/log/log_01.log")
+    trfhl =logging.FileHandler(filename=BASE_CA+"/log/log_01.log",encoding="utf-8")
    # 创建格式化器
     fmter = logging.Formatter(fmt="%(asctime)s  %(levelname)s  [%(name)s]  [%(filename)s(%(funcName)s:%(lineno)d)]  -  %(message)s")
 
     # 将格式化器添加到处理器
-    shl.setFormatter(fmter)
+    # shl.setFormatter(fmter)
+
     trfhl.setFormatter(fmter)
    # 将处理器添加到日志器
-    logger.addHandler(shl)
+   #  logger.addHandler(shl)
     logger.addHandler(trfhl)
