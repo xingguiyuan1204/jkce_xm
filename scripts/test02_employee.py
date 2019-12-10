@@ -27,7 +27,7 @@ class Employee(unittest.TestCase):
     def test_03_put(self,username="TTSS01"):
         r = self.api.put_user(username)
         print("修改员工的信息",r.json())
-        assert_common(self, r)
+        assert_common(self,r)
 
 
 
