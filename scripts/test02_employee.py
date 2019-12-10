@@ -12,7 +12,7 @@ class Employee(unittest.TestCase):
     def setUpClass(cls):
         cls.api = ApiEmployee()
 
-    def test_01_post(self,username="TTSS11",mobile="13812113333",workNumber="123654887"):
+    def test_01_post(self,username="TTSS000",mobile="13812113333",workNumber="123654887"):
         r = self.api.post_user(username,mobile,workNumber)
         print("添加员工返回的响应信息:{}".format(r.json()))
         logging.info("添加员工返回的响应信息:{}".format(r.json()))
@@ -33,10 +33,13 @@ class Employee(unittest.TestCase):
         assert_common(self, r)
 
 
-    def test_03_put(self,username="TTSS01"):
+    def test_03_put(self,username="TTSS111"):
         r = self.api.put_user(username)
-        print("修改员工的信息:{}".format(r.json))
-        logging.info("修改员工的信息:{}".format(r.json))
+
+        print("修改员工的信息:{}".format(r.json()))
+        logging.info("修改员工的信息:{}".format(r.json()))
+        # logging.info("修改员工的信息:{}".format(r.json()))
+
 
         # 断言
         assert_common(self,r)
